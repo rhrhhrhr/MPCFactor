@@ -1,7 +1,7 @@
 # MPCFactor
 This is used for generating the setup code for the MPC controller Arduino Library MPC_ruih
 ## Usage
-To generate the setup code for MPC class in MPC_ruih library, you can use the python package `LinearMPCFactor` like the way in [main.py](https://github.com/rhrhhrhr/MPC_ruih_SolverSetup/blob/main/main.py):<br>
+To generate the setup code for MPC class in MPC_ruih library, you can use the python package `LinearMPCFactor` like the way in [main.py](https://github.com/rhrhhrhr/MPC_ruih_SolverSetup/blob/main/main.py):<br><br>
 **code:**
 ```python
 import numpy as np
