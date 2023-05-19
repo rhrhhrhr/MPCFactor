@@ -64,6 +64,7 @@ MatDataType_t L_phi = 9.90287;
 
 MPC mpc = MPC(L_phi, 0.001, 0.001, 1000, 5, A, B, Q, R, QN, F, G, c, FN, cN);
 ```
-## Library Version
+## Libraries
+Package LinearMPCFactor uses numpy and scipy. The versions are as below:<br>
 numpy==1.22.4<br>
 scipy==1.7.3
