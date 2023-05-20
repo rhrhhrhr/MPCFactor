@@ -172,6 +172,14 @@ class LinearMPCFactor:
 
     # 打印求解器初始化cpp代码
     def PrintCppCode(self, epsilon_V: float, epsilon_g: float, max_iter: int):
+        print(f"MatDataType_t L_phi = {np.around(self.L_phi, self.decPlace)};")
+        print(f"MatDataType_t e_V = {epsilon_V};")
+        print(f"MatDataType_t e_g = {epsilon_g};")
+        print(f"uint32_t max_iter = {max_iter};")
+        print(f"uint32_t N = {self.N};")
+
+        print()
+
         self.PrintCppArray(self.A, "A")
         self.PrintCppArray(self.B, "B")
         self.PrintCppArray(self.Q, "Q")
@@ -211,8 +219,4 @@ class LinearMPCFactor:
 
         print()
 
-        print(f"MatDataType_t L_phi = {np.around(self.L_phi, self.decPlace)};")
-
-        print()
-
-        print(f"MPC mpc = MPC(L_phi, {epsilon_V}, {epsilon_g}, {max_iter}, {self.N}, A, B, Q, R, QN, F, G, c, FN, cN);")
+        print(f"MPC mpc = MPC(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);")
