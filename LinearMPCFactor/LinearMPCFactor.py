@@ -168,7 +168,7 @@ class LinearMPCFactor:
             column = 1
         else:
             row, column = mat.shape
-        print(f"Matrix " + name + f" = Matrix({row}, {column});")
+        print(f"Matrix " + name + f" = Matrix({row}, {column}, " + name + "_arr);")
 
     # 打印求解器初始化cpp代码
     def PrintCppCode(self, epsilon_V: float, epsilon_g: float, max_iter: int):
@@ -203,19 +203,6 @@ class LinearMPCFactor:
         self.PrintCppMatrix(self.c, "c")
         self.PrintCppMatrix(self.FN, "FN")
         self.PrintCppMatrix(self.cN, "cN")
-
-        print()
-
-        print("A = A_arr;")
-        print("B = B_arr;")
-        print("Q = Q_arr;")
-        print("R = R_arr;")
-        print("QN = QN_arr;")
-        print("F = F_arr;")
-        print("G = G_arr;")
-        print("c = c_arr;")
-        print("FN = FN_arr;")
-        print("cN = cN_arr;")
 
         print()
 
