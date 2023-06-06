@@ -49,27 +49,16 @@ MatDataType_t c_arr[6] = {5, 5, 1, 1, 1, 1};
 MatDataType_t FN_arr[8] = {1.583519, 0.878277, -1.583519, -0.878277, 0.086517, 1.788762, -0.086517, -1.788762};
 MatDataType_t cN_arr[4] = {1.0, 1.0, 1.0, 1.0};
 
-Matrix A = Matrix(2, 2);
-Matrix B = Matrix(2, 2);
-Matrix Q = Matrix(2, 2);
-Matrix R = Matrix(2, 2);
-Matrix QN = Matrix(2, 2);
-Matrix F = Matrix(6, 2);
-Matrix G = Matrix(6, 2);
-Matrix c = Matrix(6, 1);
-Matrix FN = Matrix(4, 2);
-Matrix cN = Matrix(4, 1);
-
-A = A_arr;
-B = B_arr;
-Q = Q_arr;
-R = R_arr;
-QN = QN_arr;
-F = F_arr;
-G = G_arr;
-c = c_arr;
-FN = FN_arr;
-cN = cN_arr;
+Matrix A = Matrix(2, 2, A_arr);
+Matrix B = Matrix(2, 2, B_arr);
+Matrix Q = Matrix(2, 2, Q_arr);
+Matrix R = Matrix(2, 2, R_arr);
+Matrix QN = Matrix(2, 2, QN_arr);
+Matrix F = Matrix(6, 2, F_arr);
+Matrix G = Matrix(6, 2, G_arr);
+Matrix c = Matrix(6, 1, c_arr);
+Matrix FN = Matrix(4, 2, FN_arr);
+Matrix cN = Matrix(4, 1, cN_arr);
 
 MPC mpc = MPC(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);
 ```
