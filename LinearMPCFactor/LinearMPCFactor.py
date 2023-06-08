@@ -206,4 +206,4 @@ class LinearMPCFactor:
 
         print()
 
-        print(f"MPC mpc = MPC(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);")
+        print(f"MPCController mpc = MPCController(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);")
