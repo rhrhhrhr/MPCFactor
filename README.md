@@ -60,7 +60,7 @@ Matrix c = Matrix(6, 1, c_arr);
 Matrix FN = Matrix(4, 2, FN_arr);
 Matrix cN = Matrix(4, 1, cN_arr);
 
-MPC mpc = MPC(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);
+MPCController mpc = MPCController(L_phi, e_V, e_g, max_iter, N, A, B, Q, R, QN, F, G, c, FN, cN);
 ```
 ## Libraries
 Package LinearMPCFactor uses numpy and scipy. The versions are as below:<br>
